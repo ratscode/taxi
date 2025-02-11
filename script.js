@@ -1,4 +1,3 @@
-
 // Format today's date in dd-MMM-yy format
 function formatDate(date) {
   const options = { day: '2-digit', month: '2-digit', year: '2-digit' };  //month: 'short', for 3 letters
@@ -7,7 +6,14 @@ function formatDate(date) {
 
 // Set default values on page load
 window.onload = function() {
-  document.getElementById("date").value = formatDate(new Date()); // Set today's date
+  // Retrieve last saved trip number from localStorage and set it in the input
+  const lastTripNumber = localStorage.getItem('lastTripNumber');
+  if (lastTripNumber) {
+    document.getElementById("tripNumber").value = lastTripNumber;
+  }
+
+  // Set today's date
+  document.getElementById("date").value = formatDate(new Date()); 
 };
 
 function generateReceipt() {
@@ -27,6 +33,9 @@ function generateReceipt() {
   const total = document.getElementById("total").value.toUpperCase();
   const tipOther = document.getElementById("tipOther").value.toUpperCase();
   const grandTotal = document.getElementById("grandTotal").value.toUpperCase();
+
+  // Save trip number in localStorage
+  localStorage.setItem('lastTripNumber', tripNumber);
 
   // Generate the receipt HTML
   const receiptHtml = `
@@ -52,7 +61,6 @@ function generateReceipt() {
         #receipt h3 {
           text-align: center;
           margin: 0;
-          /*font-size: 13px;  Smaller font size for header */
           margin-bottom: 0px;
         }
         .receipt-item {
@@ -66,9 +74,9 @@ function generateReceipt() {
         }
         .centered {
           text-align: center;
-          margin: 0; /* Remove margin for compact display */
+          margin: 0;
           padding: 0;
-          font-size: 12px; /* Consistent font size for footer */
+          font-size: 12px;
         }
         .footer-line {
           margin: 0;
