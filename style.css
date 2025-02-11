@@ -1,0 +1,35 @@
+/* Add your CSS styles here to customize the appearance of the receipt */
+#receipt {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  text-align: left;
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 20px;
+  width: 250px; /* Set small width for receipt box */
+}
+
+#receipt h2 {
+  text-align: center;
+}
+
+#receipt p {
+  margin: 0;
+}
+
+.receipt-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.receipt-item .item-name {
+  width: 150px;
+}
+
+.receipt-item .item-value {
+  text-align: right;
+}
+
+.centered {
+  text-align: center;
+}

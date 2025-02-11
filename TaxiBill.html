@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Taxi Receipt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Taxi Receipt</h1>
+
+  <form id="receiptForm">
+    <label for="tripNumber">TRIP#:</label>
+    <input type="text" id="tripNumber" name="tripNumber"><br><br>
+
+    <label for="date">DATE:</label>
+    <input type="text" id="date" name="date" value=""><br><br>
+
+    <label for="startTime">START TIME:</label>
+    <input type="text" id="startTime" name="startTime" value="0:00"><br><br>
+
+    <label for="endTime">END TIME:</label>
+    <input type="text" id="endTime" name="endTime" value="0:00"><br><br>
+
+    <label for="from">FROM:</label>
+    <input type="text" id="from" name="from"><br><br>
+
+    <label for="to">TO:</label>
+    <input type="text" id="to" name="to"><br><br>
+
+    <label for="rateNo">RATE NO.:</label>
+    <input type="text" id="rateNo" name="rateNo" value="02"><br><br>
+
+    <label for="stand">STAND:</label>
+    <input type="text" id="stand" name="stand" value="03"><br><br>
+
+    <label for="miles">MILES:</label>
+    <input type="text" id="miles" name="miles"><br><br>
+
+    <label for="fare">FARE:</label>
+    <input type="text" id="fare" name="fare" value="£0.00"><br><br>
+
+    <label for="surcharge">SURCHARGE:</label>
+    <input type="text" id="surcharge" name="surcharge" value="£0.00"><br><br>
+
+    <label for="otherCharges">AIRPORT CHRGS:</label>
+    <input type="text" id="otherCharges" name="otherCharges" value="£0.00"><br><br>
+
+    <label for="total">TOTAL:</label>
+    <input type="text" id="total" name="total" value="£0.00"><br><br>
+
+    <label for="tipOther">TIP/OTHER:</label>
+    <input type="text" id="tipOther" name="tipOther" value="£0.00"><br><br>
+
+    <label for="grandTotal">GR. TOTAL:</label>
+    <input type="text" id="grandTotal" name="grandTotal" value="£0.00"><br><br>
+
+    <button type="button" onclick="generateReceipt()">Generate Receipt</button>
+  </form>
+
+  <div id="receipt"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
