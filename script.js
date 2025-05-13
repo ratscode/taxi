@@ -107,7 +107,7 @@ function generateReceipt() {
         <p class="centered footer-line">THANK YOU</p>
         <p class="centered footer-line">MOMLY CARS UK</p>
         <p class="centered footer-line">READING RG6 4HL</p>
-        <p class="centered footer-line">PH: 07767991730</p>
+        <p class="centered footer-line">PH: 07927187178</p>
       </div>
 	  <br><br><br>
 	  <p>PAYMENT RECEIVED BY CREDIT/DEBIT CARD ON <span class="item-value">${date}</span></p>
